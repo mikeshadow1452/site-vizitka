@@ -1,0 +1,37 @@
+body {
+  display: grid;
+  place-items: center;
+  background: #282b30;
+  padding: 5rem;
+}
+
+.cards {
+  display: flex;
+  font-family: "sans-serif";
+}
+
+.card {
+  background: #36393e;
+  color: #f2f3f5;
+  height: 25rem;
+  width: 15rem;
+  border-radius: 1rem;
+  border: 1px solid #7289da;
+  padding: 1.5rem;
+  filter: blur(3px) brightness(0.8);
+  box-shadow: 3px 3px 12px 2px rgba(0, 0, 0, 0.6);
+  transition: 0.1s;
+}
+
+.card:not(first-child) {
+  margin: -2rem;
+}
+
+.card:hover {
+  transform: translatey(-1rem) scale(1.1);
+  filter: blur(0px);
+}
+
+.card:hover ~ .card {
+  transform: translatex(6rem);
+}
